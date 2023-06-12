@@ -1,0 +1,187 @@
+/* Reset default margin and padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* API form */
+.api-form {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  background-color: #f2f2f2;
+}
+
+.api-form textarea {
+  flex: 1;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+}
+
+.api-button {
+  padding: 5px 10px;
+  margin-left: 10px;
+  border: none;
+  background-color: #29c269;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  transition: background-color 0.5s linear;
+}
+
+.api-button:hover {
+  cursor: pointer;
+  background-color: #1d8f4c;
+  transition: background-color 0.3s linear;
+}
+
+/* Chat container */
+.chat-container {
+  margin: 20px auto;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+/* Header */
+.chat-header {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 70px;
+  background: #29c269;
+  color: #fff;
+}
+
+/* 文字 */
+.chat-header h1 {
+  font-size: 42px;
+  text-align: left;
+}
+
+/* Message list */
+.message-list {
+  background-color: #d1d3b9;
+  height: 500px;
+  overflow-y: scroll;
+  padding: 10px;
+}
+
+.message {
+  float:right;
+  clear:both;
+  margin-bottom: 1em;
+  display:flex;
+  align-items: flex-start;
+  flex-direction: row-reverse; /* メッセージを右側に配置 */
+}
+
+.sender-photo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.message .sender {
+  font-weight: bold;
+  text-align: right;
+}
+
+.sender-photo img {
+  width: 40px; /* 必要な幅に合わせて調整してください */
+  height: 40px; /* 必要な高さに合わせて調整してください */
+  border-radius: 50%; /* 画像を円形にする場合は追加してください */
+}
+
+.message .content:before {
+  content: '';
+  position: absolute;
+  bottom: 8px;
+  right: -20px;
+  border: 12px solid transparent;
+  border-left: 12px solid #e4acac;
+}
+
+.message .content {
+  background-color: #e4acac;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 0 10px 10px 10;
+  width: fit-content;
+  display: inline-block;
+  position: relative;
+  text-align: left;
+  margin-right: 20px;
+}
+
+.answer {
+  margin-bottom: 10px;
+  display: flex; /* 回答を横並びにする */
+  align-items: flex-start; /* 上揃えにする */
+}
+
+.answer .sender-photo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.answer .sender {
+  font-weight: bold;
+  margin-bottom: 5px;
+  text-align: left; /* 左寄せにする */
+}
+
+.answer .content:before {
+  content: '';
+  position: absolute;
+  bottom: 8px;
+  left: -20px; /* 右からではなく左から表示されるようにする */
+  border: 12px solid transparent;
+  border-right: 12px solid #EDF1EE; /* 右向きの矢印にする */
+}
+
+.answer .content {
+  background-color: #EDF1EE;
+  padding: 5px 10px;
+  border-radius: 5px;
+  width: fit-content;
+  display: inline-block;
+  position: relative;
+  text-align: left;
+  margin-left: 20px; /* マージンを追加して左側にずらす */
+}
+
+/* Input area */
+.input-container {
+  display: flex;
+  padding: 10px;
+  background-color: #EEEEEE;
+}
+
+.message-input {
+  flex: 1;
+  padding: 5px;
+  border: 1px solid #BBBBBB;
+  border-radius: 20px;
+}
+
+.send-button {
+  padding: 5px 10px;
+  margin-left: 10px;
+  border: none;
+  background-color: #29c269;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  transition: background-color 0.5s linear;
+}
+
+.send-button:hover {
+  cursor: pointer;
+  background-color: #1d8f4c;
+  transition: background-color 0.3s linear;
+}
